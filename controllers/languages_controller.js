@@ -1,6 +1,12 @@
 const express = require('express')
 const languages = express.Router()
-const Language = require('..models/language.js')
+const Language = require('../models/language.js')
+const createdLanguages = require('../models/language_seed.js')
+
+// SEED 
+languages.get('/seed', (req, res) => {
+    Language.insertMany([createdLanguages])
+})
 
 // Index
 languages.get('/', (req, res) => {
@@ -18,4 +24,4 @@ languages.get('/:name', (req, res) => {
         })
 })
 
-models.export = languages
+module.exports = languages

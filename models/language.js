@@ -6,7 +6,7 @@ const languageSchema = new Schema({
     name: { type: String, required: true },
     greeting: String,
     panagram: String,
-    filler: Sting
+    filler: String
 })
 
 const Language = mongoose.model('Language', languageSchema)
