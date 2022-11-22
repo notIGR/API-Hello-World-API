@@ -1,6 +1,6 @@
 const express = require('express')
 const languages = express.Router()
-const Language = require('..models/language.js')
+const Language = require('../models/language.js')
 
 // Index
 languages.get('/', (req, res) => {
@@ -18,4 +18,4 @@ languages.get('/:name', (req, res) => {
         })
 })
 
-models.export = languages
+module.exports = languages
